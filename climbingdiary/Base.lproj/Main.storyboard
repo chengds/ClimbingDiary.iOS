@@ -9,53 +9,53 @@
         <scene sceneID="cMt-Hk-hH3">
             <objects>
                 <tableViewController id="KCw-6j-v41" customClass="DiaryTableViewController" customModule="climbingdiary" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="29" sectionHeaderHeight="22" sectionFooterHeight="22" id="ceM-Kb-Zzw">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="21" sectionHeaderHeight="22" sectionFooterHeight="22" id="ceM-Kb-Zzw">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DiaryTableViewCell" id="szM-td-qOm" customClass="DiaryTableViewCell" customModule="climbingdiary" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="86" width="600" height="29"/>
+                                <rect key="frame" x="0.0" y="86" width="600" height="21"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="szM-td-qOm" id="P4h-9D-Vd3">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="28"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="20"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May 24, 2014" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgk-7r-HkT">
-                                            <rect key="frame" x="8" y="4" width="110" height="21"/>
+                                            <rect key="frame" x="8" y="2" width="100" height="17"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="110" id="akg-fV-4eS"/>
+                                                <constraint firstAttribute="width" constant="100" id="duV-G7-hlm"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Crag" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laQ-MN-VXZ">
-                                            <rect key="frame" x="130" y="4" width="40" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crag" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laQ-MN-VXZ">
+                                            <rect key="frame" x="112" y="2" width="35" height="17"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="40" id="cq2-H5-tH5"/>
+                                                <constraint firstAttribute="width" constant="35" id="VIi-X4-LWU"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seonunsan" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Oa-LH-9TQ">
-                                            <rect key="frame" x="178" y="4" width="418" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="151" y="2" width="441" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="cgk-7r-HkT" firstAttribute="leading" secondItem="P4h-9D-Vd3" secondAttribute="leadingMargin" id="03O-X2-W2W"/>
-                                        <constraint firstItem="0Oa-LH-9TQ" firstAttribute="leading" secondItem="laQ-MN-VXZ" secondAttribute="trailing" constant="10" id="EbF-Di-GJN"/>
-                                        <constraint firstItem="cgk-7r-HkT" firstAttribute="top" secondItem="P4h-9D-Vd3" secondAttribute="topMargin" id="Fo1-MB-akG"/>
-                                        <constraint firstItem="laQ-MN-VXZ" firstAttribute="top" secondItem="P4h-9D-Vd3" secondAttribute="topMargin" id="Jlg-Bx-bCq"/>
-                                        <constraint firstItem="0Oa-LH-9TQ" firstAttribute="top" secondItem="P4h-9D-Vd3" secondAttribute="topMargin" id="X97-8G-oUg"/>
-                                        <constraint firstItem="laQ-MN-VXZ" firstAttribute="leading" secondItem="cgk-7r-HkT" secondAttribute="trailing" constant="10" id="jVp-LU-QnY"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="0Oa-LH-9TQ" secondAttribute="trailing" id="syA-aD-njd"/>
+                                        <constraint firstItem="laQ-MN-VXZ" firstAttribute="leading" secondItem="cgk-7r-HkT" secondAttribute="trailing" constant="4" id="DSB-L1-UZT"/>
+                                        <constraint firstItem="cgk-7r-HkT" firstAttribute="top" secondItem="P4h-9D-Vd3" secondAttribute="topMargin" id="EmA-C4-i7H"/>
+                                        <constraint firstItem="cgk-7r-HkT" firstAttribute="leading" secondItem="P4h-9D-Vd3" secondAttribute="leadingMargin" id="OhI-H6-3tC"/>
+                                        <constraint firstItem="0Oa-LH-9TQ" firstAttribute="top" secondItem="P4h-9D-Vd3" secondAttribute="topMargin" id="UYY-0F-AP9"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="0Oa-LH-9TQ" secondAttribute="trailing" id="Usd-lp-XgX"/>
+                                        <constraint firstItem="laQ-MN-VXZ" firstAttribute="top" secondItem="P4h-9D-Vd3" secondAttribute="topMargin" id="dNW-z6-Aty"/>
+                                        <constraint firstItem="0Oa-LH-9TQ" firstAttribute="leading" secondItem="laQ-MN-VXZ" secondAttribute="trailing" constant="4" id="oaV-fk-X09"/>
                                     </constraints>
-                                    <edgeInsets key="layoutMargins" top="4" left="8" bottom="8" right="4"/>
+                                    <edgeInsets key="layoutMargins" top="2" left="8" bottom="2" right="8"/>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="dateLabel" destination="cgk-7r-HkT" id="8jE-bR-07X"/>
@@ -127,7 +127,7 @@
         <scene sceneID="CRZ-qg-ZNh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wo7-mk-0YB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Diary" id="R3F-zO-yPw"/>
+                    <tabBarItem key="tabBarItem" title="Diary" image="DiaryEntries" id="R3F-zO-yPw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3F6-Te-ciH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -146,7 +146,7 @@
         <scene sceneID="2od-Re-Ibx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UR2-29-kG4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Places" id="Zfq-gJ-s4k"/>
+                    <tabBarItem key="tabBarItem" title="Places" image="Places" id="Zfq-gJ-s4k"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mfs-3A-Nw9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -162,4 +162,8 @@
             <point key="canvasLocation" x="-484" y="748"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DiaryEntries" width="29" height="30"/>
+        <image name="Places" width="30" height="30"/>
+    </resources>
 </document>
