@@ -3,27 +3,31 @@
     <entity name="Ascent" syncable="YES">
         <attribute name="ascentType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="climbedRoute" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Route" syncable="YES"/>
-        <relationship name="entry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DiaryEntry" syncable="YES"/>
+        <relationship name="climbedRoute" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Route" inverseName="ascents" inverseEntity="Route" syncable="YES"/>
+        <relationship name="entry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DiaryEntry" inverseName="ascents" inverseEntity="DiaryEntry" syncable="YES"/>
     </entity>
     <entity name="DiaryEntry" syncable="YES">
         <attribute name="climbingType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="entryDate" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="placeClimbed" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Place" syncable="YES"/>
+        <relationship name="ascents" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Ascent" inverseName="entry" inverseEntity="Ascent" syncable="YES"/>
+        <relationship name="placeClimbed" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Place" inverseName="visits" inverseEntity="Place" syncable="YES"/>
     </entity>
     <entity name="Place" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="routes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Route" inverseName="routeLocation" inverseEntity="Route" syncable="YES"/>
+        <relationship name="visits" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DiaryEntry" inverseName="placeClimbed" inverseEntity="DiaryEntry" syncable="YES"/>
     </entity>
     <entity name="Route" syncable="YES">
         <attribute name="grade" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="routeLocation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Place" syncable="YES"/>
+        <relationship name="ascents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ascent" inverseName="climbedRoute" inverseEntity="Ascent" syncable="YES"/>
+        <relationship name="routeLocation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Place" inverseName="routes" inverseEntity="Place" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Ascent" positionX="-180" positionY="207" width="128" height="105"/>
-        <element name="Route" positionX="-216" positionY="21" width="128" height="103"/>
-        <element name="DiaryEntry" positionX="-342" positionY="-171" width="128" height="88"/>
-        <element name="Place" positionX="-47" positionY="-117" width="128" height="58"/>
+        <element name="Ascent" positionX="72" positionY="-396" width="128" height="103"/>
+        <element name="DiaryEntry" positionX="-218" positionY="-216" width="128" height="103"/>
+        <element name="Place" positionX="72" positionY="-45" width="128" height="88"/>
+        <element name="Route" positionX="288" positionY="-234" width="128" height="118"/>
     </elements>
 </model>
