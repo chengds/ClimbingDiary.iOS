@@ -11,18 +11,25 @@ import UIKit
 class DiaryTableViewController: UITableViewController {
     
     // MARK: Properties
-    
+    var entries = [DiaryEntryTemp]()
     
     // MARK: TableViewController
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        // Load sample data
+        loadSampleEntries()
+    }
+    
+    func loadSampleEntries() {
+        // Load some sample diary entries to test the interface
+        let entry1 = DiaryEntryTemp(entryDate: "Apr 24, 2014", climbingType: "Wall", placeClimbed: "Pangyo")
+        let entry2 = DiaryEntryTemp(entryDate: "May 17, 2014", climbingType: "Crag", placeClimbed: "Surisan")
+        let entry3 = DiaryEntryTemp(entryDate: "May 25, 2014", climbingType: "Crag", placeClimbed: "Seonunsan")
+        let entry4 = DiaryEntryTemp(entryDate: "Jun 6, 2014", climbingType: "Trad", placeClimbed: "Yonghwasan")
+        let entry5 = DiaryEntryTemp(entryDate: "Jun 7, 2014", climbingType: "Crag", placeClimbed: "Mureung Valley")
+        entries += [entry1, entry2, entry3, entry4, entry5]
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,24 +40,27 @@ class DiaryTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return entries.count
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cellIdentifier = "DiaryTableViewCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! DiaryTableViewCell
 
-        // Configure the cell...
+        // Retrieve the appropriate data
+        let entry = entries[indexPath.row]
+        
+        // Fill in the view
+        cell.dateLabel.text = entry.entryDate
+        cell.typeLabel.text = entry.climbingType
+        cell.placeLabel.text = entry.placeClimbed
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="szM-td-qOm">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DiaryTableViewCell" id="szM-td-qOm" customClass="DiaryTableViewCell" customModule="climbingdiary" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="86" width="600" height="29"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="szM-td-qOm" id="P4h-9D-Vd3">
@@ -30,8 +30,8 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crag" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laQ-MN-VXZ">
-                                            <rect key="frame" x="128" y="4" width="40" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Crag" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laQ-MN-VXZ">
+                                            <rect key="frame" x="130" y="4" width="40" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="40" id="cq2-H5-tH5"/>
                                             </constraints>
@@ -57,6 +57,11 @@
                                     </constraints>
                                     <edgeInsets key="layoutMargins" top="4" left="8" bottom="8" right="4"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="cgk-7r-HkT" id="8jE-bR-07X"/>
+                                    <outlet property="placeLabel" destination="0Oa-LH-9TQ" id="Aw8-Ec-ZgL"/>
+                                    <outlet property="typeLabel" destination="laQ-MN-VXZ" id="Txu-aS-Od2"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
