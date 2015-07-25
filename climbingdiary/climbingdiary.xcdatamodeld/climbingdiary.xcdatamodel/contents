@@ -7,23 +7,23 @@
         <relationship name="entry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DiaryEntry" syncable="YES"/>
     </entity>
     <entity name="DiaryEntry" syncable="YES">
-        <attribute name="climbingType" optional="YES" syncable="YES"/>
+        <attribute name="climbingType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="entryDate" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="placeClimbed" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Place" syncable="YES"/>
     </entity>
     <entity name="Place" syncable="YES">
-        <attribute name="name" optional="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Route" syncable="YES">
-        <attribute name="grade" optional="YES" syncable="YES"/>
+        <attribute name="grade" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="routeLocation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Place" syncable="YES"/>
     </entity>
     <elements>
         <element name="Ascent" positionX="-180" positionY="207" width="128" height="105"/>
-        <element name="Route" positionX="-216" positionY="21" width="128" height="105"/>
-        <element name="DiaryEntry" positionX="-342" positionY="-171" width="128" height="90"/>
-        <element name="Place" positionX="-47" positionY="-117" width="128" height="60"/>
+        <element name="Route" positionX="-216" positionY="21" width="128" height="103"/>
+        <element name="DiaryEntry" positionX="-342" positionY="-171" width="128" height="88"/>
+        <element name="Place" positionX="-47" positionY="-117" width="128" height="58"/>
     </elements>
 </model>
