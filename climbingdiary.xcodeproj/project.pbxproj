@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		72182D611B6383070064A217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72182D601B6383070064A217 /* AppDelegate.swift */; };
-		72182D631B6383070064A217 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72182D621B6383070064A217 /* ViewController.swift */; };
 		72182D661B6383070064A217 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72182D641B6383070064A217 /* Main.storyboard */; };
 		72182D691B6383070064A217 /* climbingdiary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 72182D671B6383070064A217 /* climbingdiary.xcdatamodeld */; };
 		72182D6B1B6383070064A217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72182D6A1B6383070064A217 /* Assets.xcassets */; };
 		72182D6E1B6383070064A217 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72182D6C1B6383070064A217 /* LaunchScreen.storyboard */; };
 		72182D791B6383080064A217 /* climbingdiaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72182D781B6383080064A217 /* climbingdiaryTests.swift */; };
 		72182D841B6383080064A217 /* climbingdiaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72182D831B6383080064A217 /* climbingdiaryUITests.swift */; };
+		8BE9C7971B63921B002EE558 /* DiaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE9C7961B63921B002EE558 /* DiaryTableViewController.swift */; };
+		8BE9C7991B63926D002EE558 /* PlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE9C7981B63926D002EE558 /* PlacesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,6 @@
 /* Begin PBXFileReference section */
 		72182D5D1B6383070064A217 /* climbingdiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = climbingdiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72182D601B6383070064A217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		72182D621B6383070064A217 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		72182D651B6383070064A217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		72182D681B6383070064A217 /* climbingdiary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = climbingdiary.xcdatamodel; sourceTree = "<group>"; };
 		72182D6A1B6383070064A217 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		72182D7F1B6383080064A217 /* climbingdiaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = climbingdiaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72182D831B6383080064A217 /* climbingdiaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = climbingdiaryUITests.swift; sourceTree = "<group>"; };
 		72182D851B6383080064A217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BE9C7961B63921B002EE558 /* DiaryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryTableViewController.swift; sourceTree = "<group>"; };
+		8BE9C7981B63926D002EE558 /* PlacesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +101,9 @@
 		72182D5F1B6383070064A217 /* climbingdiary */ = {
 			isa = PBXGroup;
 			children = (
+				8BE9C7981B63926D002EE558 /* PlacesTableViewController.swift */,
+				8BE9C7961B63921B002EE558 /* DiaryTableViewController.swift */,
 				72182D601B6383070064A217 /* AppDelegate.swift */,
-				72182D621B6383070064A217 /* ViewController.swift */,
 				72182D641B6383070064A217 /* Main.storyboard */,
 				72182D6A1B6383070064A217 /* Assets.xcassets */,
 				72182D6C1B6383070064A217 /* LaunchScreen.storyboard */,
@@ -259,7 +262,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				72182D691B6383070064A217 /* climbingdiary.xcdatamodeld in Sources */,
-				72182D631B6383070064A217 /* ViewController.swift in Sources */,
+				8BE9C7991B63926D002EE558 /* PlacesTableViewController.swift in Sources */,
+				8BE9C7971B63921B002EE558 /* DiaryTableViewController.swift in Sources */,
 				72182D611B6383070064A217 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,6 +489,7 @@
 				72182D8A1B6383080064A217 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		72182D8B1B6383080064A217 /* Build configuration list for PBXNativeTarget "climbingdiaryTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +498,7 @@
 				72182D8D1B6383080064A217 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		72182D8E1B6383080064A217 /* Build configuration list for PBXNativeTarget "climbingdiaryUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +507,7 @@
 				72182D901B6383080064A217 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
